@@ -6,7 +6,7 @@
 #define TRANSLATOR_IREQUESTHANDLER_HPP
 
 #include "IRequest.hpp"
-#include "Concepts.hpp"
+#include "deps/requestor/include/Requestor/Concepts.hpp"
 
 template<class Request, typename Result>
 requires Derived<IRequest, Request>

@@ -9,10 +9,10 @@
 #include <functional>
 #include <map>
 
-#include "Interfaces/IRequest.hpp"
-#include "Interfaces/IRequestHandler.hpp"
+#include "deps/requestor/include/Requestor/Interfaces/IRequest.hpp"
+#include "deps/requestor/include/Requestor/Interfaces/IRequestHandler.hpp"
 #include "Concepts.hpp"
-#include "Exceptions/HandlerResultTypeMismatch.hpp"
+#include "deps/requestor/include/Requestor/Exceptions/HandlerResultTypeMismatch.hpp"
 
 class RequestHandlerFactory
 {
