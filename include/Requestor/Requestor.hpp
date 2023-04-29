@@ -10,12 +10,12 @@
 #include <typeindex>
 #include <string>
 
-#include "deps/requestor/include/Requestor/Interfaces/IRequest.hpp"
-#include "deps/requestor/include/Requestor/Interfaces/IRequestHandler.hpp"
+#include "Interfaces/IRequest.hpp"
+#include "Interfaces/IRequestHandler.hpp"
 #include "RequestHandlerFactory.hpp"
 #include "Concepts.hpp"
-#include "deps/requestor/include/Requestor/Exceptions/HandlerNotFound.hpp"
-#include "deps/requestor/include/Requestor/Exceptions/HandlerAlreadyRegistered.hpp"
+#include "Exceptions/HandlerNotFound.hpp"
+#include "Exceptions/HandlerAlreadyRegistered.hpp"
 
 class Requestor
 {
