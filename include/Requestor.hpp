@@ -24,7 +24,7 @@ private:
 
     Requestor() = default;
 
-    std::map<std::type_index, std::string> requestHandlers;
+    std::map<std::type_index, std::string> requestHandlers{};
 
     RequestHandlerFactory requestHandlerFactory;
 

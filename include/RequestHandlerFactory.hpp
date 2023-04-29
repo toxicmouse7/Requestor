@@ -9,16 +9,16 @@
 #include <functional>
 #include <map>
 
-#include "Requestor/Interfaces/IRequest.hpp"
-#include "Requestor/Interfaces/IRequestHandler.hpp"
-#include "Requestor/Concepts.hpp"
-#include "Requestor/Exceptions/HandlerResultTypeMismatch.hpp"
+#include "Interfaces/IRequest.hpp"
+#include "Interfaces/IRequestHandler.hpp"
+#include "Concepts.hpp"
+#include "Exceptions/HandlerResultTypeMismatch.hpp"
 
 class RequestHandlerFactory
 {
 private:
-    std::map<std::string, std::function<void*()>> handlerBuilders;
-    std::map<std::string, std::string> handlerResultTypes;
+    std::map<std::string, std::function<void*()>> handlerBuilders{};
+    std::map<std::string, std::string> handlerResultTypes{};
 public:
     template<class Request, typename Result>
     requires Derived<IRequest, Request>
