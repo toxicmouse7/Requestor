@@ -6,6 +6,25 @@ Requestor is a library, which provides divided application-defined requests hand
 
 While C++ doesn't have reflection, Requestor is based on templates.
 
+## Quick Setup
+
+There are two ways to use this library.
+
+- The first and simplest is to copy **`include/Requestor`** directly to your project.
+
+- The second is to use CMake:
+  - Create dependencies folder and clone Requestor:
+    ```shell
+    mkdir deps
+    git submodule add 'https://github.com/toxicmouse7/Requestor.git' deps/requestor
+    ```
+  - In your CMakeLists.txt file add next lines:
+    ```cmake
+    add_subdirectory("deps/requestor")
+    # ...
+    target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE "Requestor")
+    ```
+
 ## Quick Start
 
 Requestor is used as singleton. All you have to do is to define requests and handlers
