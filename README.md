@@ -4,7 +4,7 @@
 
 Requestor is a library, which provides divided application-defined requests handling.
 
-While C++ doesn't have reflection, Requestor is based on templates.
+While C++ doesn't have reflection, Requestor is based on templates and concepts (which means C++ 20 or upper is required).
 
 ## Quick Setup
 
