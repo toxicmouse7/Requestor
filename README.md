@@ -88,7 +88,7 @@ int main()
     requestor.RegisterHandler<HelloWorldRequestHandler>();
     
     // Create request
-    auto requst = HelloWorldRequest();
+    auto request = HelloWorldRequest();
     
     // Handle request
     requestor.Handle(request);
