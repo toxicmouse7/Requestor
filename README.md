@@ -164,7 +164,7 @@ int main()
     requestor.RegisterHandler<HelloRequestHandler>();
     
     // Create request
-    auto requst = HelloRequest();
+    auto request = HelloRequest();
     
     // Handle request
     auto result = requestor.Handle<std::string>(request);
