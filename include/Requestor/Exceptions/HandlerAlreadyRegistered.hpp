@@ -9,12 +9,12 @@
 #include <string>
 #include <format>
 
-class HandlerAlreadyRegistered : public std::exception
+class HandlerAlreadyRegistered : public std::runtime_error
 {
 public:
     HandlerAlreadyRegistered(const std::string& handlerName, const std::string& requestName)
-            : std::exception(
-            std::format("Handler '{0}' already registred for '{1}' request", handlerName, requestName).c_str())
+            : std::runtime_error(
+            fmt::format("Handler '{0}' already registred for '{1}' request", handlerName, requestName).c_str())
     {}
 };
 

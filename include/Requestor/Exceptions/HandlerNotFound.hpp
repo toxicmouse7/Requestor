@@ -9,11 +9,11 @@
 #include <string>
 #include <format>
 
-class HandlerNotFound : public std::exception
+class HandlerNotFound : public std::runtime_error
 {
 public:
     explicit HandlerNotFound(const std::string& handlerName)
-        : std::exception(std::format("Handler for '{0}' request was not found", handlerName).c_str())
+        : std::runtime_error(fmt::format("Handler for '{0}' request was not found", handlerName).c_str())
     {
 
     }

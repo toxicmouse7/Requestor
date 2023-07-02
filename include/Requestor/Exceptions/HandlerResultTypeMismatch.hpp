@@ -7,15 +7,15 @@
 
 #include <exception>
 #include <string>
-#include <format>
+#include <fmt/format.h>
 
-class HandlerResultTypeMismatch : public std::exception
+class HandlerResultTypeMismatch : public std::runtime_error
 {
 public:
     HandlerResultTypeMismatch(
             const std::string& handlerName, const std::string& rightType, const std::string& wrongType)
-            : std::exception(
-            std::format(
+            : std::runtime_error(
+            fmt::format(
                     "Result type for handler '{0}' is '{1}', but '{2}' was requested", handlerName, rightType,
                     wrongType).c_str())
     {}
